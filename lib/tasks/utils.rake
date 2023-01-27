@@ -11,6 +11,25 @@ namespace :utils do
         )
       end
     puts "Gerado os contatos (Contacts) ... [OK]"
+    puts "Gerando os enderecos (Addresses) ..."
+      Contact.all.each do |contact|
+        Address.create!(
+          street: Faker::Address.street_address,
+          city: Faker::Address.city,
+          state: Faker::Address.state_abbr,
+          contact: contact
+        )
+      end
+    puts "Gerado os enderecos (Addresses) [OK]"
+    puts "Gerando os telefones (Phones) ..."
+      Contact.all.each do |contact|
+        Random.rand(1..5).times do |i|
+          Phone.create!(
+            phone: Faker::PhoneNumber.phone_number,
+            contact: contact
+          )
+        end
+      end
+    puts "Gerado os telefones (Phones) [OK]"
   end
-
 end
