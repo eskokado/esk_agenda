@@ -28,6 +28,21 @@
     <%= collection_select(:contact, :kind_id, @kind_options_for_select, :id, :description) %>
   </div>
 
+  <%= form.fields_for :address do |address_fields| %>
+    <div>
+      <%= address_fields.label :street, style: "display: block" %>
+      <%= address_fields.text_field :street %>
+    </div>
+    <div>
+      <%= address_fields.label :city, style: "display: block" %>
+      <%= address_fields.text_field :city %>
+    </div>
+    <div>
+      <%= address_fields.label :state, style: "display: block" %>
+      <%= address_fields.text_field :state %>
+    </div>
+  <% end %>
+
   <div>
     <%= form.label :rmk, style: "display: block" %>
     <%= form.text_area :rmk %>
