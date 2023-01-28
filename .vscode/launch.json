@@ -1,0 +1,132 @@
+// 20220103094842
+// https://raw.githubusercontent.com/desenvolvendo-me/linguagem_2021_ruby_ideal/release/v0.1/.vscode/launch.json
+
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "rdbg",
+      "name": "Debug current file",
+      "request": "launch",
+      "script": "",
+      "askParameters": true
+    },
+    {
+      "type": "rdbg",
+      "name": "Debug current file with rdbg",
+      "request": "launch",
+      "script": "${file}",
+      "args": [],
+      "useBundler": false,
+      "command": "ruby"
+    },
+    {
+      "type": "rdbg",
+      "name": "Debug current file with rdbg/rails",
+      "request": "launch",
+      "script": "./bin/rails s",
+      "args": [],
+      "useBundler": false,
+      "command": "ruby"
+    },
+    {
+      "type": "rdbg",
+      "name": "Attach with rdbg",
+      "request": "attach"
+    },
+    {
+      "type": "rdbg",
+      "name": "Run rake test",
+      "request": "launch",
+      "command": "rake",
+      "script": "test", // launch rake test with debugger
+      "args": [],
+      "askParameters": false // Do not ask startup parameter any more
+    },
+    {
+      "name": "Start Rails server",
+      "type": "Ruby",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "program": "${workspaceRoot}/bin/rails",
+      "args": [
+        "server",
+        "-p",
+        "3000"
+      ]
+    },
+    {
+      "name": "Debug Rails server",
+      "type": "Ruby",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "useBundler": true,
+      "pathToBundler": "~/.rbenv/versions/2.7.2/bin/bundle",
+      "program": "~/.rbenv/versions/2.7.2/bin/rails",
+      "args": [
+        "server",
+        "-p",
+        "3000"
+      ]
+    },
+    {
+      "name": "Run RSpec - all",
+      "type": "Ruby",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "program": "~/.rbenv/versions/2.7.2/bin/rspec",
+      "args": [
+        "--pattern",
+        "${workspaceRoot}/spec/**/*_spec.rb"
+      ]
+    },
+    {
+      "name": "Debug RSpec - open spec file",
+      "type": "Ruby",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "useBundler": true,
+      "pathToBundler": "~/.rbenv/versions/2.7.2/bin/bundle",
+      "debuggerPort": "1235",
+      "program": "~/.rbenv/versions/2.7.2/bin/rspec",
+      "args": [
+        "${file}"
+      ]
+    },
+    {
+      "name": "Debug RSpec - open spec file on a certain line",
+      "type": "Ruby",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "useBundler": true,
+      "pathToBundler": "~/.rbenv/versions/2.7.2/bin/bundle",
+      "debuggerPort": "1235",
+      "program": "~/.rbenv/versions/2.7.2/bin/rspec",
+      "args": [
+        "${file}:${lineNumber}"
+      ]
+    }
+  ]
+}
+
+// {
+//   // Use o IntelliSense para saber mais sobre os atributos possíveis.
+//   // Focalizar para exibir as descrições dos atributos existentes.
+//   // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+//   "version": "0.2.0",
+//   "configurations": [
+//     {
+//       "type": "rdbg",
+//       "name": "Debug current file with rdbg",
+//       "request": "launch",
+//       "script": "${file}",
+//       "args": [],
+//       "askParameters": true
+//     },
+//     {
+//       "type": "rdbg",
+//       "name": "Attach with rdbg",
+//       "request": "attach"
+//     }
+//   ]
+// }
