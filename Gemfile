@@ -6,6 +6,8 @@ ruby "2.7.2"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4", ">= 7.0.4.1"
 
+# Centralization of locale data collection for Ruby on Rails.
+gem 'rails-i18n', '~> 7.0.0'
 #While Faker generates data at random, returned values are not guaranteed to be unique by default.
 gem "faker"
 
