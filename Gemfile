@@ -7,6 +7,8 @@ ruby "2.7.2"
 gem "rails", "~> 7.0.4", ">= 7.0.4.1"
 # O Lero-lero Generator é uma ferramenta capaz de gerar frases que 'falam' muita coisa mas que não tem conteúdo algum.
 gem 'lerolero_generator'
+# Cocoon makes it easier to handle nested forms.
+gem "cocoon"
 # Centralization of locale data collection for Ruby on Rails.
 gem 'rails-i18n', '~> 7.0.0'
 #While Faker generates data at random, returned values are not guaranteed to be unique by default.
