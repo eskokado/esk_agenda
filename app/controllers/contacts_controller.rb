@@ -74,7 +74,7 @@ class ContactsController < ApplicationController
         :kind_id, 
         :rmk, 
         address_attributes: [:street, :city, :state],
-        phones_attributes: [:id, :phone]
+        phones_attributes: [:id, :phone, :_destroy]
       )
     end
 
