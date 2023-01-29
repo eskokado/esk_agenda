@@ -73,7 +73,8 @@ class ContactsController < ApplicationController
         :email, 
         :kind_id, 
         :rmk, 
-        address_attributes: [:street, :city, :state]
+        address_attributes: [:street, :city, :state],
+        phones_attributes: [:id, :phone]
       )
     end
 

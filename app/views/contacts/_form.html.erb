@@ -43,6 +43,13 @@
     </div>
   <% end %>
 
+  <%= form.fields_for :phones do |phones_fields| %>
+    <div>
+      <%= phones_fields.label :phone, style: "display: block" %>
+      <%= phones_fields.text_field :phone %>
+    </div>
+  <% end %>
+
   <div>
     <%= form.label :rmk, style: "display: block" %>
     <%= form.text_area :rmk %>
