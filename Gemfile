@@ -9,6 +9,8 @@ gem "rails", "~> 7.0.4", ">= 7.0.4.1"
 gem 'lerolero_generator'
 # Cocoon makes it easier to handle nested forms.
 gem "cocoon"
+# A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for modern web app frameworks and ORMs
+gem "kaminari"
 # Centralization of locale data collection for Ruby on Rails.
 gem 'rails-i18n', '~> 7.0.0'
 #While Faker generates data at random, returned values are not guaranteed to be unique by default.
