@@ -1,5 +1,6 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: %i[ show edit update destroy ]
+  before_action :set_options_for_select, only: %i[ edit new update create ]
 
   # GET /contacts or /contacts.json
   def index
@@ -14,12 +15,10 @@ class ContactsController < ApplicationController
   def new
     @contact = Contact.new
     @contact.build_address
-    options_for_select
   end
 
   # GET /contacts/1/edit
   def edit
-    options_for_select
   end
 
   # POST /contacts or /contacts.json
@@ -78,7 +77,7 @@ class ContactsController < ApplicationController
       )
     end
 
-    def options_for_select
+    def set_options_for_select
       @kind_options_for_select = Kind.all
     end
 end

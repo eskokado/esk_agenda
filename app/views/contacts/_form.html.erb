@@ -1,7 +1,7 @@
 <%= form_for(@contact, html: { class: "basic-grey" } ) do |form| %>
   <% if contact.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+      <h2><%= "#{pluralize(contact.errors.count, 'erros')} #{t('messages.errors')}" %>:</h2>
 
       <ul>
         <% contact.errors.each do |error| %>
