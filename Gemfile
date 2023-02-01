@@ -7,6 +7,8 @@ ruby "2.7.2"
 gem "rails", "~> 7.0.4", ">= 7.0.4.1"
 # O Lero-lero Generator é uma ferramenta capaz de gerar frases que 'falam' muita coisa mas que não tem conteúdo algum.
 gem 'lerolero_generator'
+# kaminari-i18n
+gem 'kaminari-i18n'
 # Cocoon makes it easier to handle nested forms.
 gem "cocoon"
 # A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for modern web app frameworks and ORMs
