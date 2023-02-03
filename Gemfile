@@ -62,7 +62,10 @@ gem "bootsnap", require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug"
+  gem "ruby-debug-ide", require: false
+  gem "debase", require: false
+  gem 'solargraph', require: false
+  gem 'rspec-core'
 end
 
 group :development do
