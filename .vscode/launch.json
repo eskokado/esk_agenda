@@ -5,106 +5,28 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "rdbg",
-      "name": "Debug current file",
-      "request": "launch",
-      "script": "",
-      "askParameters": true
-    },
-    {
-      "type": "rdbg",
-      "name": "Debug current file with rdbg",
-      "request": "launch",
-      "script": "${file}",
-      "args": [],
-      "useBundler": false,
-      "command": "ruby"
-    },
-    {
-      "type": "rdbg",
-      "name": "Debug current file with rdbg/rails",
-      "request": "launch",
-      "script": "./bin/rrails s",
-      "args": [],
-      "useBundler": false,
-      "command": "ruby"
-    },
-    {
-      "type": "rdbg",
-      "name": "Attach with rdbg",
-      "request": "attach"
-    },
-    {
-      "type": "rdbg",
-      "name": "Run rake test",
-      "request": "launch",
-      "command": "rake",
-      "script": "test", // launch rake test with debugger
-      "args": [],
-      "askParameters": false // Do not ask startup parameter any more
-    },
-    {
-      "name": "Start Rails server",
+      "name": "Start rails server",
       "type": "Ruby",
       "request": "launch",
-      "cwd": "${workspaceRoot}",
-      "program": "${workspaceRoot}/bin/rails",
-      "args": [
-        "server",
-        "-p",
-        "3000"
-      ]
-    },
-    {
-      "name": "Debug Rails server",
-      "type": "Ruby",
-      "request": "launch",
-      "cwd": "${workspaceRoot}",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/bin/rails",
       "useBundler": true,
-      "pathToBundler": "~/.rbenv/versions/2.7.2/bin/bundle",
-      "program": "~/.rbenv/versions/2.7.2/bin/rails",
-      "args": [
-        "server",
-        "-p",
-        "3000"
-      ]
+      "pathToBundler": "${workspaceFolder}/bin/bundle",
+      "showDebuggerOutput": true,
+      "pathToRDebugIDE": "/${workspaceFolder}/bin/rdebug-ide",
+      "args": ["s"]
     },
     {
-      "name": "Run RSpec - all",
+      "name": "Run tests",
       "type": "Ruby",
       "request": "launch",
-      "cwd": "${workspaceRoot}",
-      "program": "~/.rbenv/versions/2.7.2/bin/rspec",
-      "args": [
-        "--pattern",
-        "${workspaceRoot}/spec/**/*_spec.rb"
-      ]
-    },
-    {
-      "name": "Debug RSpec - open spec file",
-      "type": "Ruby",
-      "request": "launch",
-      "cwd": "${workspaceRoot}",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/bin/rspec",
       "useBundler": true,
-      "pathToBundler": "~/.rbenv/versions/2.7.2/bin/bundle",
-      "debuggerPort": "1235",
-      "program": "~/.rbenv/versions/2.7.2/bin/rspec",
-      "args": [
-        "${file}"
-      ]
-    },
-    {
-      "name": "Debug RSpec - open spec file on a certain line",
-      "type": "Ruby",
-      "request": "launch",
-      "cwd": "${workspaceRoot}",
-      "useBundler": true,
-      "pathToBundler": "~/.rbenv/versions/2.7.2/bin/bundle",
-      "debuggerPort": "1235",
-      "program": "~/.rbenv/versions/2.7.2/bin/rspec",
-      "args": [
-        "${file}:${lineNumber}"
-      ]
+      "pathToBundler": "${workspaceFolder}/bin/bundle",
+      "showDebuggerOutput": true,
+      "pathToRDebugIDE": "/${workspaceFolder}/bin/rdebug-ide",
+      "args": []
     }
   ]
 }
